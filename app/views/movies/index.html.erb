@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title> Movies </title>
+        <style>
+            #movies {
+                font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            #movies td, #movies th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #movies tr:nth-child(even){background-color: #f2f2f2;}
+
+            #movies tr:hover {background-color: #ddd;}
+
+            #movies th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4CAF50;
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+        <table id="movies">
+            <tr>
+                <th>Name</th>
+                <th>Lead Actor</th>
+                <th>Released Year</th>
+                <th>Rating</th>
+            </tr>
+            <% @movies.each do |movie| %>
+                <tr>
+                    <td><%= movie.name%></td>
+                    <td><%= movie.lead_actor%></td>
+                    <td><%= movie.released_year%></td>
+                    <td><%= movie.rating%></td>
+                </tr>
+            <% end %>
+        </table>
+    </body>
+</html>
