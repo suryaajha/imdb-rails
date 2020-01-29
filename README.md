@@ -7,7 +7,10 @@ Things you may want to cover:
 
 * Ruby version
 
+Version = 2.5.5
 * System dependencies
+
+Sqlite Version : 1.3.6
 
 * Configuration
 
